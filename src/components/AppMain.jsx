@@ -1,4 +1,6 @@
 import webLanguages from "../database/webLanguages"
+import DescriptionCard from "./DescriptionCard";
+import EmptyCard from "./EmptyCard";
 import { useState } from 'react';
 
 export default function AppMain() {
@@ -11,7 +13,6 @@ export default function AppMain() {
     function handleClick(index) {
         setclicked(index)
     }
-
     
     return (
         <>  
@@ -28,15 +29,12 @@ export default function AppMain() {
                 ))}
             </div>
                 {clicked === null ? (
-                    <div className="container card">
-                        <p className="container">Nessun linguaggio selezionato</p>
-                    </div>
+                    <EmptyCard/>
                 ) : (
-                    <div className="container card">
-                        <h4 className="p-2">{activeContent.name}</h4>
-                        <p className="p-3">{activeContent.description}</p>
-                    </div> 
+                    <DescriptionCard activeContent={activeContent}/>
                 )}
+
+                
                  
             
             
