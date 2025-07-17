@@ -18,7 +18,12 @@ export default function AppMain() {
             <div className="container d-flex">
                 {webLanguages.map((language, index) => (
                     <div key={language.id}>
-                        <button className="btn btn-primary p-2 m-2" onClick={() => handleClick(index)}>{language.name}  </button>
+                        <button
+                            className={`btn btn-primary p-2 m-2${clicked === index ? " btn-warning" : ""}`}
+                            onClick={() => handleClick(index)}
+                        >
+                            {language.name}
+                        </button>
                     </div>
                 ))}
             </div>
