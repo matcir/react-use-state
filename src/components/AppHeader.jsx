@@ -1,9 +1,7 @@
 export default function() {
     return(
         <>
-            <div>
-                
-            </div>
+            <h1 className="bg-light p-3 ">Learn Web Development</h1>
         </>
     )
 }
