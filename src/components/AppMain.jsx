@@ -22,7 +22,11 @@ export default function AppMain() {
                     </div>
                 ))}
             </div>
-                {clicked === null ? <p className="container">Nessun linguaggio selezionato</p> : (
+                {clicked === null ? (
+                    <div className="container card">
+                        <p className="container">Nessun linguaggio selezionato</p>
+                    </div>
+                ) : (
                     <div className="container card">
                         <h4 className="p-2">{activeContent.name}</h4>
                         <p className="p-3">{activeContent.description}</p>
